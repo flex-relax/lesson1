@@ -18,13 +18,11 @@ list_main = (
     username,
     content,
     status,
-    "Дата создания заметки:",
     created_date[0:5],
-    "Дата завершения заметки: ",
     issue_date[0:5],
     list_title,
 )
 
 print(
-    f"Пользователь: {list_main[0]},\nТекст: {list_main[1]},\nСтатус: {list_main[2]},\nДата создания заметки: {created_date[0:5]},\nДата завершения заметки: {issue_date[0:5]},\nЗаголовки: {list_title}"
+    f"Пользователь: {list_main[0]},\nТекст: {list_main[1]},\nСтатус: {list_main[2]},\nДата создания заметки: {list_main[3]},\nДата завершения заметки: {list_main[4]},\nЗаголовки: {list_main[5]}"
 )
