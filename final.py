@@ -18,8 +18,8 @@ list_main = (
     username,
     content,
     status,
-    created_date[0:5],
-    issue_date[0:5],
+    created_date[:5],
+    issue_date[:5],
     list_title,
 )
 
