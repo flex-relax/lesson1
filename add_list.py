@@ -1,5 +1,9 @@
-name1 = input("Введите заголовок заметки: ")
-name2 = input("Введите заголовок заметки: ")
-list_title = [name1, name2]
+list_title = [
+    input("Введите 1-ый заголовок заметки: "),
+    input("Введите 2-ой заголовок заметки: "),
+    input("Введите 3-ий заголовок заметки: "),
+]
 
-print(name1, name2, list_title)
+print("Первый заголовок: ", list_title[0])
+print("Второй заголовок: ", list_title[1])
+print("Третий заголовок: ", list_title[2])
