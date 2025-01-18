@@ -1,20 +1,23 @@
+# Импортируем модуль datetime для сравнения дат
 import datetime as DT
 
-date_str = input("Введите дату завершения заметки (dd.mm.yyyy)\n")
-vypusk = DT.datetime.strptime(date_str, "%d.%m.%Y").date()
+# Вводим дату и создаем объект datetime методом класса strptime
+issue_date = input("Введите дату завершения заметки (dd.mm.yyyy)\n")
+deadline = DT.datetime.strptime(issue_date, "%d.%m.%Y").date()
 now = DT.datetime.now()
 print(now)
-print(vypusk)
+print(deadline)
+# Сравниваем текущую дату с дедлайном и выводим соответствующее сравнению сообщение
 if (
-    now.day > vypusk.day
-    and now.month >= vypusk.month
-    and now.year >= vypusk.year
-    or now.day < vypusk.day
-    and now.month > vypusk.month
-    and now.year >= vypusk.year
-    or now.year > vypusk.year
-    or now.month < vypusk.month
-    and now.year > vypusk.year
+    now.day > deadline.day
+    and now.month >= deadline.month
+    and now.year >= deadline.year
+    or now.day < deadline.day
+    and now.month > deadline.month
+    and now.year >= deadline.year
+    or now.year > deadline.year
+    or now.month < deadline.month
+    and now.year > deadline.year
 ):
     print("Срок выполнения заметки истёк")
 else:
